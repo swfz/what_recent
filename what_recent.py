@@ -156,7 +156,7 @@ def read_json(filename):
         return json.load(f)
 
 def activities_summary(activities):
-    model = os.environ['OPENAI_MODEL'] or 'gpt-3.5-turbo'
+    model = os.getenv('OPENAI_MODEL', 'gpt-3.5-turbo')
     system_content = """
 これからGitHubでのリポジトリとどんなことをしたかのテキストを渡します
 これらをまとめて、最近の活動についてまとめてください
@@ -169,7 +169,6 @@ def activities_summary(activities):
     # print("input ==================================================")
     # print(text)
     # print("input ==================================================")
-    print(model)
 
     system_prompt = {"role": "system", "content": system_content}
 
