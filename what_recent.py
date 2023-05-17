@@ -2,6 +2,7 @@ import json
 import openai
 import requests
 import sys
+import os
 
 BOT_USER_NAMES=['renovate[bot]', 'dependabot[bot]', 'github-actions[bot]']
 
@@ -155,6 +156,7 @@ def read_json(filename):
         return json.load(f)
 
 def activities_summary(activities):
+    model = os.getenv('OPENAI_MODEL', 'gpt-3.5-turbo')
     system_content = """
 これからGitHubでのリポジトリとどんなことをしたかのテキストを渡します
 これらをまとめて、最近の活動についてまとめてください
@@ -171,7 +173,7 @@ def activities_summary(activities):
     system_prompt = {"role": "system", "content": system_content}
 
     res = openai.ChatCompletion.create(
-        model="gpt-4",
+        model=model,
         temperature=0.9,
         messages=[
             system_prompt,

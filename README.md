@@ -6,6 +6,7 @@ GitHubのPublicAPIとChatGPTを使ってこの人最近なにやってるの？�
 
 ```
 $ export OPENAI_API_KEY=*****
+$ export OPENAI_MODEL=gpt-4
 $ python what_recent.py swfz
 
 32件のサマリー対象Activityがありました
@@ -22,3 +23,11 @@ assistant: 最近の活動について、以下のまとめができます。
 このことから、技術的に興味を持っている可能性が高いのは、Gatsby（Webフレームワーク）やGitHubのAPI関連、Vim（エディタ）などです。また、彼の取り組みは中～高難易度のものが多いと考えられます。同じ
 ような内容を繰り返し取り組んでいることが、興味のある技術分野や取り組みの難易度に影響していると言えます。
 ```
+
+## Environments
+
+| Environment | value | remark |
+|:-|:-|:-|
+| OPENAI_API_KEY | API KEY |  |
+| OPENAI_MODEL | gpt-4 | default: gpt-3.5-turbo see: [models](https://platform.openai.com/docs/models/overview)|
+
