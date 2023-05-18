@@ -8,7 +8,7 @@ GitHubのPublicAPIとChatGPTを使ってこの人最近なにやってるの？�
 $ export OPENAI_API_KEY=*****
 $ export OPENAI_MODEL=gpt-4
 $ pipenv install
-$ pipenv run python what_recent.py swfz
+$ pipenv run what_recent swfz
 
 32件のサマリー対象Activityがありました
 26件の未対応Activityがありました
@@ -30,6 +30,6 @@ assistant: 最近の活動について、以下のまとめができます。
 | Environment | value | remark |
 |:-|:-|:-|
 | OPENAI_API_KEY | API KEY |  |
-| OPENAI_MODEL | gpt-4 | default: gpt-3.5-turbo see: [models](https://platform.openai.com/docs/models/overview)|
+| OPENAI_MODEL | gpt-4 etc... | default: gpt-3.5-turbo see: [models](https://platform.openai.com/docs/models/overview)|
 
 
