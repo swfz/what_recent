@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: what_recent
+    tty: true
+    volumes:
+      - .:/app
+      - $HOME/.gitconfig:/root/.gitconfig
+    dns:
+      - 8.8.8.8
+    environment:
+      - OPENAI_MODEL=${OPENAI_MODEL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
