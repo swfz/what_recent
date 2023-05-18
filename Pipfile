@@ -6,6 +6,5 @@ name = "pypi"
 [packages]
 openai = "*"
 requests = "*"
-what-recent = {editable = true, path = "."}
 
 [dev-packages]
