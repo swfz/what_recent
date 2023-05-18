@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3578876c8db1b988d7862e58667330288a273305c86163d6646fd0f43ec4bab3"
+            "sha256": "ef5a953b7e56f28ef59e7fbcdd425b9cadf5c9517ab79f47f5104375a27a1c6a"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -419,6 +419,10 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.0.2"
+        },
+        "what-recent": {
+            "editable": true,
+            "path": "."
         },
         "yarl": {
             "hashes": [
