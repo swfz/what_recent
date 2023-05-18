@@ -12,7 +12,7 @@ setup(
     install_requires=['openai','requests'],
     entry_points={
         "console_scripts": [
-            "what_recent = what_recent.main:main",
+            "what_recent=what_recent.main:main",
         ]
     }
 )
