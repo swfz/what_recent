@@ -4,11 +4,18 @@ GitHubのPublicAPIとChatGPTを使ってこの人最近なにやってるの？�
 
 ## Usage
 
+### Install
+
+```
+$ pip install git+https://github.com/swfz/what_recent.git
+```
+
+### Example
+
 ```
 $ export OPENAI_API_KEY=*****
 $ export OPENAI_MODEL=gpt-4
-$ pipenv install
-$ pipenv run what_recent swfz
+$ what_recent swfz
 
 32件のサマリー対象Activityがありました
 26件の未対応Activityがありました
@@ -32,4 +39,9 @@ assistant: 最近の活動について、以下のまとめができます。
 | OPENAI_API_KEY | API KEY |  |
 | OPENAI_MODEL | gpt-4 etc... | default: gpt-3.5-turbo see: [models](https://platform.openai.com/docs/models/overview)|
 
+## Development
 
+```
+pipenv install -e .
+pipenv run what_recent swfz
+```
