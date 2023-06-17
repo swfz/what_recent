@@ -102,7 +102,7 @@ class CreateEvent(Event):
 
         return {
             "repository": self.data['repo']['name'],
-            "changes": "{self.data['payload']['ref']}という{self.data['payload']['ref_type']}を作成しました"
+            "changes": f"{self.data['payload']['ref']}という{self.data['payload']['ref_type']}を作成しました"
         }
 
     def bot_event(self):
@@ -119,7 +119,7 @@ class PullRequestReviewCommentEvent(Event):
 
         return {
             "repository": self.data['repo']['name'],
-            "changes": "{self.data['payload']['pull_request']['title'}というPullRequestに{self.data['payload']['comment']['body']}というレビューコメントをしています"
+            "changes": f"{self.data['payload']['pull_request']['title']}というPullRequestに{self.data['payload']['comment']['body']}というレビューコメントをしています"
         }
 
     def bot_event(self):
