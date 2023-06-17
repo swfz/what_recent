@@ -29,7 +29,7 @@ class PushEvent(Event):
     def transform(self):
         return {
             "repository": self.data['repo']['name'],
-            "changes": "下記のコミットをしています" + "\n".join([c['message'] for c in self.data['payload']['commits']])
+            "changes": "下記のコミットをしています" + "\n".join([f"url: {c['url']} {c['message']}" for c in self.data['payload']['commits']])
         }
 
     def bot_event(self):
