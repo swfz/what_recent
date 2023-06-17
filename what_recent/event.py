@@ -33,7 +33,8 @@ class PushEvent(Event):
         }
 
     def bot_event(self):
-        return all([c['author']['name'].find('users.noreply.github.com') for c in self.data['payload']['commits']])
+        # NOTE: この条件だとRenovateでビルド失敗してて手動で修正入れたパターンは含まれなくなってしまう
+        return any([c['author']['email'].find('users.noreply.github.com') > 0 for c in self.data['payload']['commits']])
 
     def available(self):
         return not self.bot_event()
