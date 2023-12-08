@@ -15,10 +15,6 @@ def activities_summary(activities):
 
     text = "\n".join(list(map(lambda a: f"リポジトリ:{a['repository']}\n{a['changes']}", activities)))
 
-    # print("input ==================================================")
-    # print(text)
-    # print("input ==================================================")
-
     system_prompt = {"role": "system", "content": system_content}
 
     res = openai.ChatCompletion.create(
